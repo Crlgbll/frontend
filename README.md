@@ -14,8 +14,18 @@ Before getting started, ensure that you have the following installed:
 **Installing Dependencies**
 
 #Clone the repository to your local machine.
+  
+  git clone <https://github.com/Crlgbll/frontend>
+
 #Navigate to the project directory using your terminal.
+
+  cd <project_directory>
+  
+Replace <project_directory> with the name of the directory where you cloned the repository.
+
 #Run npm install to install the required dependencies.
+
+npm install
 
 **Nuxt.js Configuration**
 
