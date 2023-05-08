@@ -1,69 +1,45 @@
-# nuxt2-tailwindcss
+NUXT2-TAILWIND
+This is a Vue.js project that uses Strapi as a backend for authentication. The project contains two components - Signup and Login. The Signup component allows users to create a new account while the Login component allows existing users to log in.
 
-## Build Setup
+Project Setup
+To set up the project, follow these steps:
 
-```bash
-# install dependencies
-$ npm install
+Clone the repository to your local machine.
+Navigate to the project directory.
+Run npm install to install the project dependencies.
+Create a .env file in the root of the project and add the following environment variables:
+VUE_APP_API_URL=http://localhost:1337
+Replace http://localhost:1337 with the URL of your Strapi backend.
+Run npm run serve to start the development server.
+Navigate to http://localhost:8080 in your browser to view the project.
+Project Configuration
+The project uses Strapi as a backend for authentication. To configure the project to work with your Strapi backend, you'll need to do the following:
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+Set up a Strapi backend with authentication enabled.
+Update the VUE_APP_API_URL environment variable in the .env file with the URL of your Strapi backend.
+Update the Content-Type header in the login and signup methods in the Login.vue and Signup.vue components, respectively, to match the content type of your Strapi backend.
+Project Usage
+The project contains two components - Signup and Login. The Signup component allows users to create a new account while the Login component allows existing users to log in.
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+Signup
+To create a new account:
 
-# generate static project
-$ npm run generate
-```
+Click the Sign-Up button in the navbar.
+Enter a username, email, and password in the input fields.
+Click the Sign Up button to submit the form.
+If the form is submitted successfully, you'll be redirected to the home page.
+Login
+To log in to an existing account:
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+Click the Log In button in the navbar.
+Enter your email and password in the input fields.
+Click the Sign In button to submit the form.
+If the login is successful, you'll be redirected to the home page.
+Navbar and NavbarAuth
+The project includes two navbar components - Navbar and NavbarAuth.
 
-## Special Directories
+The Navbar component is displayed when the user is not logged in. It contains links to the Signup and Login components.
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+The NavbarAuth component is displayed when the user is logged in. It contains a link to the home page and a Log Out button.
 
-### `assets`
-
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
-
-### `components`
-
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
-
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
-
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+To switch between the Navbar and NavbarAuth components, the Login and Signup components emit a user-logged-in event when the user logs in. The App.vue component listens for this event and updates the navbar accordingly.
