@@ -1,45 +1,61 @@
-NUXT2-TAILWIND
-This is a Vue.js project that uses Strapi as a backend for authentication. The project contains two components - Signup and Login. The Signup component allows users to create a new account while the Login component allows existing users to log in.
+**NUXT2-TAILWINDCSS**
+This project is a web application built with Nuxt.js version 2.16.3 that uses Strapi as a backend for authentication. The login system contains two components - Signup and Login. The Signup component allows users to create a new account while the Login component allows existing users to log in.
 
-Project Setup
-To set up the project, follow these steps:
+**Project Setup**
+**Prerequisites**
+Before getting started, ensure that you have the following installed:
 
-Clone the repository to your local machine.
-Navigate to the project directory.
-Run npm install to install the project dependencies.
-Create a .env file in the root of the project and add the following environment variables:
-VUE_APP_API_URL=http://localhost:1337
-Replace http://localhost:1337 with the URL of your Strapi backend.
-Run npm run serve to start the development server.
-Navigate to http://localhost:8080 in your browser to view the project.
-Project Configuration
-The project uses Strapi as a backend for authentication. To configure the project to work with your Strapi backend, you'll need to do the following:
+#Node.js 14.x or later
+#NPM 6.x or later
 
-Set up a Strapi backend with authentication enabled.
-Update the VUE_APP_API_URL environment variable in the .env file with the URL of your Strapi backend.
-Update the Content-Type header in the login and signup methods in the Login.vue and Signup.vue components, respectively, to match the content type of your Strapi backend.
-Project Usage
-The project contains two components - Signup and Login. The Signup component allows users to create a new account while the Login component allows existing users to log in.
+**Installing Dependencies**
+#Clone the repository to your local machine.
+#Navigate to the project directory using your terminal.
+#Run npm install to install the required dependencies.
 
-Signup
-To create a new account:
+**Nuxt.js Configuration**
+Nuxt.js configuration can be found in the nuxt.config.js file in the root directory of the project. Here are some key settings you may want to modify:
+ #head: Defines the default meta tags and other information that will be included in the head section of each page.
+ #loading: Defines the loading bar that appears when a page is loading.
+ #modules: Defines the Nuxt.js modules to be used in the project. Some commonly used modules include @nuxtjs/axios, @nuxtjs/auth, @nuxtjs/pwa, and @nuxtjs/google-  analytics.
+ #build: Defines the build options for the project, such as the transpiler, minification, and postcss plugins.
+ 
+**Running the Project**
+  #Run npm run dev to start the development server.
+  #Open your browser and navigate to http://localhost:3000.
+  #Building the Project
+  #Run npm run build to build the production version of the project.
+  #Run npm run start to start the production server.
+  
+**Usage**
+Here are some key features of this project:
+**Sign up**
+Navigate to the sign-up page by clicking the "Sign up" link in the navigation bar.
+Enter a username, email address, and password.
+Click the "Sign up" button to submit the form.
+A confirmation email will be sent to the email address provided.
+Follow the link in the confirmation email to activate the account.
+**Login**
+Navigate to the login page by clicking the "Login" link in the navigation bar.
+Enter the email address and password used during registration.
+Click the "Sign in" button to submit the form.
+If the login is successful, you will be redirected to the home page.
+**Home page**
+The home page displays a welcome message and the username of the authenticated user.
+If you try to access the home page without being authenticated, you will be redirected to the login page.
 
-Click the Sign-Up button in the navbar.
-Enter a username, email, and password in the input fields.
-Click the Sign Up button to submit the form.
-If the form is submitted successfully, you'll be redirected to the home page.
-Login
-To log in to an existing account:
 
-Click the Log In button in the navbar.
-Enter your email and password in the input fields.
-Click the Sign In button to submit the form.
-If the login is successful, you'll be redirected to the home page.
-Navbar and NavbarAuth
-The project includes two navbar components - Navbar and NavbarAuth.
 
-The Navbar component is displayed when the user is not logged in. It contains links to the Signup and Login components.
 
-The NavbarAuth component is displayed when the user is logged in. It contains a link to the home page and a Log Out button.
 
-To switch between the Navbar and NavbarAuth components, the Login and Signup components emit a user-logged-in event when the user logs in. The App.vue component listens for this event and updates the navbar accordingly.
+
+
+
+
+
+
+
+
+
+
+
