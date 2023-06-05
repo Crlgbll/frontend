@@ -23,6 +23,7 @@ module.exports = {
       '2xl': '1536px',
       'phone': {'max': '639px'},
     },
+    darkMode: 'class',
     
   },
   plugins: [],

@@ -50,8 +50,9 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: 'http://localhost:1337',
+    baseURL: 'http://localhost:3001',
   },
+
   auth: {
     // Options
     strategies: {
@@ -83,6 +84,12 @@ export default {
       home: '/',
     },
   },
+  serverMiddleware: [
+    {
+      path: "/api/chat.js",
+      handler: "~/api/chat.js",
+    },
+  ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
