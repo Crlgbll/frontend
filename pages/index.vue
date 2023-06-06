@@ -9,7 +9,7 @@
         <!-- Title -->
         <h1 class="text-7xl w-96">ASK ANYTHING</h1>
         <!-- Description -->
-        <p class="text-xl w-80">A chat bot powered by OpenAi GPT 3.5-Turbo that will answer any questions you ask</p>
+        <p class="text-xl w-80">A chat-bot powered by OpenAi GPT 3.5-Turbo that will answer any questions you ask</p>
       </div>
     </div>
   </div>
